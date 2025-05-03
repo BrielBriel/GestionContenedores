@@ -8,7 +8,7 @@ namespace GestionContenedores
 {
     class Pila
     {
-        int NE;
+        int NE { get; set; }
         int Size;
         object[] Arreglo;
 
