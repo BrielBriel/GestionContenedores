@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 183);
+            this.label1.Location = new System.Drawing.Point(12, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(390, 42);
             this.label1.TabIndex = 1;
@@ -60,7 +60,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 245);
+            this.label3.Location = new System.Drawing.Point(64, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 29);
             this.label3.TabIndex = 3;
@@ -72,7 +72,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 290);
+            this.label2.Location = new System.Drawing.Point(64, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(239, 29);
             this.label2.TabIndex = 5;
@@ -82,7 +82,7 @@
             // txtTp
             // 
             this.txtTp.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtTp.Location = new System.Drawing.Point(247, 245);
+            this.txtTp.Location = new System.Drawing.Point(237, 131);
             this.txtTp.Multiline = true;
             this.txtTp.Name = "txtTp";
             this.txtTp.Size = new System.Drawing.Size(449, 29);
@@ -92,7 +92,7 @@
             // txtKg
             // 
             this.txtKg.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKg.Location = new System.Drawing.Point(247, 290);
+            this.txtKg.Location = new System.Drawing.Point(302, 182);
             this.txtKg.Multiline = true;
             this.txtKg.Name = "txtKg";
             this.txtKg.Size = new System.Drawing.Size(100, 29);
@@ -104,10 +104,10 @@
             this.txtReporte.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReporte.ForeColor = System.Drawing.Color.Black;
-            this.txtReporte.Location = new System.Drawing.Point(696, 313);
+            this.txtReporte.Location = new System.Drawing.Point(710, 68);
             this.txtReporte.Multiline = true;
             this.txtReporte.Name = "txtReporte";
-            this.txtReporte.Size = new System.Drawing.Size(376, 194);
+            this.txtReporte.Size = new System.Drawing.Size(376, 360);
             this.txtReporte.TabIndex = 8;
             this.txtReporte.TextChanged += new System.EventHandler(this.txtReporte_TextChanged);
             // 
@@ -115,7 +115,7 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.Gray;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIngresar.Location = new System.Drawing.Point(179, 325);
+            this.btnIngresar.Location = new System.Drawing.Point(150, 237);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(103, 42);
             this.btnIngresar.TabIndex = 9;
@@ -128,7 +128,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 399);
+            this.label4.Location = new System.Drawing.Point(12, 297);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(627, 42);
             this.label4.TabIndex = 10;
@@ -140,7 +140,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(75, 467);
+            this.label5.Location = new System.Drawing.Point(64, 364);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 29);
             this.label5.TabIndex = 11;
@@ -150,7 +150,7 @@
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtId.Location = new System.Drawing.Point(247, 467);
+            this.txtId.Location = new System.Drawing.Point(237, 364);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 29);
@@ -163,7 +163,7 @@
             this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReport.Location = new System.Drawing.Point(179, 502);
+            this.btnReport.Location = new System.Drawing.Point(150, 416);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(103, 42);
             this.btnReport.TabIndex = 13;
@@ -175,7 +175,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(517, 485);
+            this.button1.Location = new System.Drawing.Point(463, 416);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 42);
             this.button1.TabIndex = 14;
@@ -207,6 +207,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

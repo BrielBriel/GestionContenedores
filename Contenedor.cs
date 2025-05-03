@@ -40,8 +40,9 @@ namespace GestionContenedores
         public void GenerarID()
         {
             contadorID++;
-            IdUnico = contadorID.ToString("D4");
+            IdUnico = $"C{contadorID:D3}";
         }
+
         public double CalcularPrecio(double PesoEnKg)
         {
             return PrecioCont = this.PesoEnKg * 2;
@@ -50,7 +51,8 @@ namespace GestionContenedores
         public override string ToString()
         {
             return $"ID Contenedor: {IdUnico}, Tipo Producto: {this.TipoContendor}, " +
-                   $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}";
+                   $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}, " +
+                   $"Fecha de salida: {DateRegister:dd/MM}, Estado de envío: {Environment.NewLine}";
         }
 
 

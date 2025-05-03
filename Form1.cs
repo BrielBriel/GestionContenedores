@@ -25,13 +25,18 @@ namespace GestionContenedores
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string tipo = txtTp.Text;
-            double xd = Convert.ToDouble(txtKg.Text);
-            c = new Contenedor(xd, tipo);
-            c.GenerarID();
-            c.GetDateRegister();
-            p.Apilar(c);
-            
+            if (!p.EstaLLena())
+            {
+                string tipo = txtTp.Text;
+                double xd = Convert.ToDouble(txtKg.Text);
+                c = new Contenedor(xd, tipo);
+                c.GenerarID();
+                c.GetDateRegister();
+                p.Apilar(c);
+            } else
+            {
+                MessageBox.Show("El sistema ha llegado a su limite de ingresos");
+            }  
             
             
         }
@@ -96,6 +101,11 @@ namespace GestionContenedores
             {
                 MessageBox.Show("Error al mostrar el reporte.");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
