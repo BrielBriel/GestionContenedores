@@ -54,7 +54,5 @@ namespace GestionContenedores
                    $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}, " +
                    $"Fecha de salida: {DateRegister:dd/MM}, Estado de envío: {Environment.NewLine}";
         }
-
-
     }
 }

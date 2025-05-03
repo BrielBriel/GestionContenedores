@@ -1,1 +1,17 @@
+# Build artifacts
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Visual Studio files
 .vs/
+*.user
+*.suo
+
+# Others
+*.log
+*.tmp
+*.DS_Store

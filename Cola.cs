@@ -65,11 +65,7 @@ namespace GestionContenedores
                     Inicio = 0;
             }
             return aux;
-            {
-                
-            }
         }
-
         public int _NE
         {
             get
@@ -86,8 +82,5 @@ namespace GestionContenedores
         {
             return Arreglo[NE-1];
         }
-
-
-
     }
 }

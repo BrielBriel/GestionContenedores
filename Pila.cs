@@ -60,8 +60,5 @@ namespace GestionContenedores
             }
             return Reporte;
         }
-
-
-
     }
 }
