@@ -52,7 +52,5 @@ namespace GestionContenedores
             return $"ID Contenedor: {IdUnico}, Tipo Producto: {this.TipoContendor}, " +
                    $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}";
         }
-
-
     }
 }
