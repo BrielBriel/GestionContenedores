@@ -51,7 +51,8 @@ namespace GestionContenedores
         public override string ToString()
         {
             return $"ID Contenedor: {IdUnico}, Tipo Producto: {this.TipoContendor}, " +
-                   $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}" + Environment.NewLine;
+                   $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}, " +
+                   $"Fecha de salida: {DateRegister:dd/MM}, Estado de envío: {Environment.NewLine}";
         }
 
 
