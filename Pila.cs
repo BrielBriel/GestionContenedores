@@ -23,7 +23,6 @@ namespace GestionContenedores
         {
             Arreglo[NE++] = elemento;
             Contenedor c;
-            
         }
 
         public object Desapilar()
@@ -59,6 +58,10 @@ namespace GestionContenedores
                 Reporte = c.ToString() + Reporte;
             }
             return Reporte;
+        }
+        public object Buscar(int i)
+        {
+            return Arreglo[i];
         }
     }
 }

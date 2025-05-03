@@ -36,9 +36,7 @@ namespace GestionContenedores
             } else
             {
                 MessageBox.Show("El sistema ha llegado a su limite de ingresos");
-            }  
-            
-            
+            }   
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
