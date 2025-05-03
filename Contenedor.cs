@@ -24,6 +24,17 @@ namespace GestionContenedores
             this.PrecioCont = 0;
             this.DateRegister = DateTime.Now;
         }
+        public string _IdUnico
+        {
+            get
+            {
+                return this.IdUnico;
+            }
+            set
+            {
+                this.IdUnico = value;
+            }
+        }   
         public DateTime GetDateRegister()
         {
             return this.DateRegister;

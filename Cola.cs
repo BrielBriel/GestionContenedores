@@ -10,7 +10,7 @@ namespace GestionContenedores
     {
         Object[] Arreglo;
         int Size;
-        int NE;
+        int NE { get;set; }
         int Inicio;
         int Final;
 
