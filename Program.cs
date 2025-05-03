@@ -14,7 +14,6 @@ namespace GestionContenedores
         [STAThread]
         static void Main()
         {
-            Console.WriteLn("victorMarika");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
