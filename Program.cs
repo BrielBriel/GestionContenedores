@@ -17,7 +17,12 @@ namespace GestionContenedores
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+<<<<<<< HEAD
            
+=======
+            Console.WriteLine("w");
+            Console.WriteLine("indiño");
+>>>>>>> ratictor
         }
     }
 }
