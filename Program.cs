@@ -18,6 +18,7 @@ namespace GestionContenedores
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
             Console.WriteLine("w");
+            Console.WriteLine("indiño");
         }
     }
 }
