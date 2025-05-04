@@ -17,13 +17,6 @@ namespace GestionContenedores
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
-           
-
-            Console.WriteLine("w");
-            Console.WriteLine("indiño");
-            //trashiño
-            Console.WriteLine("Casa Dilan");
             
         }
     }
