@@ -69,5 +69,16 @@ namespace GestionContenedores.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terminal_contenedores_envio_al_atardecer_puerto_moderno_fondo_comercio_global_631068_938 {
+            get {
+                object obj = ResourceManager.GetObject("terminal-contenedores-envio-al-atardecer-puerto-moderno-fondo-comercio-global_631" +
+                        "068-938", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
