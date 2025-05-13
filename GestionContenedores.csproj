@@ -87,5 +87,8 @@
   <ItemGroup>
     <None Include="Resources\images.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminal-contenedores-envio-al-atardecer-puerto-moderno-fondo-comercio-global_631068-938.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
