@@ -250,12 +250,7 @@ namespace GestionContenedores
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.Show();
-        }
-
+       
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
             
