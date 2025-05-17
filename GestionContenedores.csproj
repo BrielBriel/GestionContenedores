@@ -90,5 +90,8 @@
   <ItemGroup>
     <None Include="Resources\terminal-contenedores-envio-al-atardecer-puerto-moderno-fondo-comercio-global_631068-938.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Container.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
