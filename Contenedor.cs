@@ -54,7 +54,7 @@ namespace GestionContenedores
             contadorID++;
             IdUnico = $"C{contadorID:D3}";
 
-            // Calcular fecha de salida automáticamente
+            
             int diasEspera = PesoEnKg > 1000 ? 8 : 3;
             FechaSalida = DateRegister.AddDays(diasEspera);
         }

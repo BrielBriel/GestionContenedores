@@ -29,12 +29,12 @@ namespace GestionContenedores
         {
             Contenedor encontrado = null;
 
-            // Buscar en pMenorIgual
+            
             encontrado = BuscarEnPilaPorID(pMenorIgual, idBuscado);
             if (encontrado != null)
                 return encontrado.ToString();
 
-            // Si no encontrado, buscar en pMayor
+            
             encontrado = BuscarEnPilaPorID(pMayor, idBuscado);
             if (encontrado != null)
                 return encontrado.ToString();
@@ -55,7 +55,7 @@ namespace GestionContenedores
                 pilaTemporal.Apilar(c);
             }
 
-            // Restaurar pila
+            
             while (!pilaTemporal.EstaVacia())
                 pila.Apilar(pilaTemporal.Desapilar());
 
@@ -76,7 +76,7 @@ namespace GestionContenedores
                 return;
             }
 
-            // Asumiendo que el constructor de Contenedor asigna la fecha actual a DateRegister
+         
             c = new Contenedor(peso, txtTp.Text.Trim());
             c.GenerarID();
 
@@ -105,7 +105,7 @@ namespace GestionContenedores
                 }
             }
 
-            // Limpieza de campos
+            
             txtTp.Clear();
             txtKg.Clear();
         }
@@ -213,7 +213,7 @@ namespace GestionContenedores
                         txtReporte.AppendText($"[CARGA FORZADA MANUALMENTE]{Environment.NewLine}{cont.ToString()}\n\n");
                         encontrado = true;
 
-                        // Reingresar el contenedor modificado para que siga en la cola
+                        
                         colaTemporal.Ingresar(cont);
                         continue;
                     }
@@ -222,7 +222,7 @@ namespace GestionContenedores
                 colaTemporal.Ingresar(obj);
             }
 
-            // Restaurar cola con todos los elementos (incluyendo el modificado)
+            
             while (!colaTemporal.EstaVacia())
                 cx.Ingresar(colaTemporal.Retirar());
 
@@ -236,11 +236,6 @@ namespace GestionContenedores
 
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
