@@ -72,7 +72,7 @@ namespace GestionContenedores
                 $"Tipo Producto : {TipoContendor.PadRight(15)}" + Environment.NewLine +
                 $"Peso (kg)     : {PesoEnKg,8:F2}" + Environment.NewLine +
                 $"Fecha Ingreso : {DateRegister:dd/MM/yyyy HH:mm}" + Environment.NewLine +
-                $"Fecha Salida  : {(FechaSalida == DateTime.MinValue ? "No asignada" : FechaSalida.ToString("dd/MM/yyyy HH:mm"))}" + Environment.NewLine +
+                $"Fecha Salida  : {(FechaSalida == DateTime.MinValue ? "No asignada" : FechaSalida.ToString("dd/MM/yyyy"))}" + Environment.NewLine +
                 new string('-', 70) + Environment.NewLine;
         }
 
