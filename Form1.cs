@@ -20,6 +20,7 @@ namespace GestionContenedores
             InitializeComponent();
             p = new Pila(1000);
             cx = new Cola(1000);
+            int[] camionesCarga = new int[] { 100 };
             
         }
 
@@ -109,6 +110,22 @@ namespace GestionContenedores
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+            
         }
     }
 }
