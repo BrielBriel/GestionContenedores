@@ -39,14 +39,14 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtIdBuscar = new System.Windows.Forms.TextBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtForzarCarga = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -110,6 +110,7 @@
             // txtReporte
             // 
             this.txtReporte.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtReporte.Enabled = false;
             this.txtReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReporte.ForeColor = System.Drawing.Color.Black;
             this.txtReporte.Location = new System.Drawing.Point(725, 29);
@@ -152,21 +153,21 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(64, 320);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 29);
+            this.label5.Size = new System.Drawing.Size(181, 29);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Tipo Producto: ";
+            this.label5.Text = "ID Contenedor: ";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // txtId
+            // txtIdBuscar
             // 
-            this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtId.Location = new System.Drawing.Point(258, 320);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 29);
-            this.txtId.TabIndex = 12;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            this.txtIdBuscar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdBuscar.Location = new System.Drawing.Point(258, 320);
+            this.txtIdBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdBuscar.Multiline = true;
+            this.txtIdBuscar.Name = "txtIdBuscar";
+            this.txtIdBuscar.Size = new System.Drawing.Size(100, 29);
+            this.txtIdBuscar.TabIndex = 12;
+            this.txtIdBuscar.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // btnReport
             // 
@@ -207,7 +208,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 440);
+            this.label6.Location = new System.Drawing.Point(12, 431);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(531, 42);
             this.label6.TabIndex = 15;
@@ -219,35 +220,36 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(64, 500);
+            this.label7.Location = new System.Drawing.Point(64, 487);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(172, 29);
             this.label7.TabIndex = 16;
             this.label7.Text = "Id Contenedor:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox1
+            // txtForzarCarga
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(258, 500);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
+            this.txtForzarCarga.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtForzarCarga.Location = new System.Drawing.Point(258, 487);
+            this.txtForzarCarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtForzarCarga.Multiline = true;
+            this.txtForzarCarga.Name = "txtForzarCarga";
+            this.txtForzarCarga.Size = new System.Drawing.Size(100, 29);
+            this.txtForzarCarga.TabIndex = 17;
+            this.txtForzarCarga.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
             // 
-            // button2
+            // button3
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(625, 487);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 62);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Informacion extendida";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(69, 533);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(243, 42);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Cargar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -256,13 +258,13 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1387, 586);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtForzarCarga);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtIdBuscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnIngresar);
@@ -276,7 +278,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "v";
+            this.Text = "Gestion Contenedores";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,14 +296,14 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtIdBuscar;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtForzarCarga;
+        private System.Windows.Forms.Button button3;
     }
 }
 
