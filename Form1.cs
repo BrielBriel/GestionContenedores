@@ -30,11 +30,43 @@ namespace GestionContenedores
             int[] camionesCarga = new int[] { 100 };
             fechaSimulada = new FechaSimulada();
             entregados = new List<Contenedor>();
-
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             lblFechaSimulada.Text = $"Fecha: {fechaSimulada}";
+            txtReporte.ReadOnly = true;
+            txtReporte.BackColor = SystemColors.Control;
+            txtReporte.TabStop = false;
+
+            // Ajustar los controles con Anchor para que se expandan con el formulario
+            txtTp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtKg.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtReporte.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            btnIngresar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnReport.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            // Suscribirse al evento Resize para ajuste dinámico
+            this.Resize += new EventHandler(Form1_Resize);
+        }
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Ajustar los TextBox al tamaño del formulario
+            txtReporte.Width = this.ClientSize.Width - 40;
+            txtReporte.Height = this.ClientSize.Height - 150;
+
+            // Ajustar GroupBox para mantener la organización
+            groupBox1.Width = this.ClientSize.Width - 40;
+            groupBox2.Width = this.ClientSize.Width - 40;
+            groupBox3.Width = this.ClientSize.Width - 40;
+
+            // Reubicar los botones en la parte inferior derecha
+            btnIngresar.Left = this.ClientSize.Width - btnIngresar.Width - 20;
+            btnReport.Left = this.ClientSize.Width - btnReport.Width - 20;
         }
 
         private int ContarContenedoresActuales()
@@ -605,6 +637,10 @@ namespace GestionContenedores
         {
 
         }
-       
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
