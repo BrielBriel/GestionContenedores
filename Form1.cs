@@ -41,7 +41,7 @@ namespace GestionContenedores
         {
             int count = 0;
 
-            
+            // Contar en pila pesada
             Pila tempMayor = new Pila(pMayor.Size);
             while (!pMayor.EstaVacia())
             {
@@ -52,6 +52,7 @@ namespace GestionContenedores
             while (!tempMayor.EstaVacia())
                 pMayor.Apilar(tempMayor.Desapilar());
 
+            // Contar en pila liviana
             Pila tempMenor = new Pila(pMenorIgual.Size);
             while (!pMenorIgual.EstaVacia())
             {
@@ -62,7 +63,7 @@ namespace GestionContenedores
             while (!tempMenor.EstaVacia())
                 pMenorIgual.Apilar(tempMenor.Desapilar());
 
-            
+            // Contar en cola (en tránsito)
             Cola tempCola = new Cola(cx.Size);
             while (!cx.EstaVacia())
             {
@@ -73,11 +74,38 @@ namespace GestionContenedores
             while (!tempCola.EstaVacia())
                 cx.Ingresar(tempCola.Retirar());
 
-          
-            count += entregados.Count;
+            // No contar los entregados porque ya salieron del sistema
 
             return count;
         }
+
+        private void DespachoAutomatico(int maxDespachos = 10)
+        {
+            int despachados = 0;
+
+            while (despachados < maxDespachos && (!pMenorIgual.EstaVacia() || !pMayor.EstaVacia()))
+            {
+                Contenedor cont = null;
+
+                if (!pMenorIgual.EstaVacia())
+                    cont = (Contenedor)pMenorIgual.Desapilar();
+                else if (!pMayor.EstaVacia())
+                    cont = (Contenedor)pMayor.Desapilar();
+
+                if (cont != null)
+                {
+                    // Asignar fecha de salida simulada (si quieres)
+                    cont.FechaSalida = fechaSimulada.FechaActual.AddDays(cont.PesoEnKg <= 1000 ? 1 : 3);
+
+                    cx.Ingresar(cont);
+                    despachados++;
+                }
+            }
+
+            if (despachados > 0)
+                MessageBox.Show($"{despachados} contenedores despachados automáticamente.");
+        }
+
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -440,10 +468,12 @@ namespace GestionContenedores
                 return;
             }
 
+            // Despacho automático para liberar espacio
+            DespachoAutomatico();
+
             int capacidadMaxima = 1000;
             int contActuales = ContarContenedoresActuales();
 
-            
             if (cantidad + contActuales > capacidadMaxima)
             {
                 MessageBox.Show("No se puede generar más de 1000 contenedores en total.");
@@ -460,7 +490,6 @@ namespace GestionContenedores
 
                 Contenedor cont = new Contenedor(peso, tipo);
                 cont.GenerarID();
-
 
                 if (peso <= 1000)
                 {
@@ -484,6 +513,7 @@ namespace GestionContenedores
 
             MessageBox.Show($"{cantidad} contenedores aleatorios generados.");
         }
+
 
 
         private void button6_Click(object sender, EventArgs e)
