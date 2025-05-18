@@ -8,9 +8,9 @@ namespace GestionContenedores
 {
     class Pila
     {
-        int NE { get; set; }
-        int Size;
-        object[] Arreglo;
+        public int NE { get; set; }
+        public int Size { get; set; }
+        public object[] Arreglo { get; set; }
 
         public Pila(int size)
         {
@@ -55,10 +55,11 @@ namespace GestionContenedores
             for (int i = 0; i < this.NE; i++)
             {
                 c = (Contenedor)Arreglo[i];
-                Reporte = c.ToString() + Reporte;
+                Reporte += c.ToString();
             }
             return Reporte;
         }
+
         public object Buscar(int i)
         {
             return Arreglo[i];

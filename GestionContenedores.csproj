@@ -91,7 +91,19 @@
     <None Include="Resources\terminal-contenedores-envio-al-atardecer-puerto-moderno-fondo-comercio-global_631068-938.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Container.png" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+<None Include="Resources\anastasios-antoniadis-AMXFr97d00c-unsplash.jpg" />
+</ItemGroup>
+<ItemGroup>
+  <None Include="Resources\fabius-leibrock-Qvg3vBo4GKU-unsplash.jpg" />
+</ItemGroup>
+<ItemGroup>
+  <None Include="Resources\image.jpg" />
+</ItemGroup>
+<ItemGroup>
+  <None Include="Resources\prueba.jpg" />
+</ItemGroup>
+<ItemGroup>
+  <None Include="Resources\prueba mejor.jpg" />
+</ItemGroup>
+<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace GestionContenedores
 {
-    class Contenedor
+    public class Contenedor
     {
-        private static int contadorID = 0;
-        private string IdUnico { get; set; }
-        private double PesoEnKg { get; set; }
-        private string TipoContendor { get; set; }
-        private double PrecioCont;
-        private DateTime DateRegister;
+        public static int contadorID = 0;
+        public string IdUnico { get; set; }
+        public double PesoEnKg { get; set; }
+        public string TipoContendor { get; set; }
+        public double PrecioCont;
+        public DateTime DateRegister { get; set; }
+        public DateTime FechaSalida { get; set; }
 
         public Contenedor()
         {
@@ -34,7 +35,7 @@ namespace GestionContenedores
             {
                 this.IdUnico = value;
             }
-        }   
+        }
         public DateTime GetDateRegister()
         {
             return this.DateRegister;
@@ -52,7 +53,12 @@ namespace GestionContenedores
         {
             contadorID++;
             IdUnico = $"C{contadorID:D3}";
+
+            
+            int diasEspera = PesoEnKg > 1000 ? 8 : 3;
+            FechaSalida = DateRegister.AddDays(diasEspera);
         }
+
 
         public double CalcularPrecio(double PesoEnKg)
         {
@@ -61,9 +67,16 @@ namespace GestionContenedores
 
         public override string ToString()
         {
-            return $"ID Contenedor: {IdUnico}, Tipo Producto: {this.TipoContendor}, " +
-                   $"Peso: {PesoEnKg}kg, Fecha de ingreso: {DateRegister:dd/MM/yyyy HH:mm:ss}, " +
-                   $"Fecha de salida: {DateRegister:dd/MM}, Estado de envío: {Environment.NewLine}";
+            return
+                $"ID Contenedor : {IdUnico.PadRight(6)}" + Environment.NewLine +
+                $"Tipo Producto : {TipoContendor.PadRight(15)}" + Environment.NewLine +
+                $"Peso (kg)     : {PesoEnKg,8:F2}" + Environment.NewLine +
+                $"Fecha Ingreso : {DateRegister:dd/MM/yyyy HH:mm}" + Environment.NewLine +
+                $"Fecha Salida  : {(FechaSalida == DateTime.MinValue ? "No asignada" : FechaSalida.ToString("dd/MM/yyyy"))}" + Environment.NewLine +
+                new string('-', 70) + Environment.NewLine;
         }
+
+
+
     }
 }
