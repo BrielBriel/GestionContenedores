@@ -442,20 +442,18 @@ namespace GestionContenedores
 
             int capacidadMaxima = 1000;
             int contActuales = ContarContenedoresActuales();
-            int espacioDisponible = capacidadMaxima - contActuales;
 
-            if (espacioDisponible <= 0)
+            
+            if (cantidad + contActuales > capacidadMaxima)
             {
-                MessageBox.Show("No hay espacio disponible para agregar más contenedores.");
+                MessageBox.Show("No se puede generar más de 1000 contenedores en total.");
                 return;
             }
-
-            int cantidadAgregar = Math.Min(cantidad, espacioDisponible);
 
             Random rnd = new Random();
             string[] tipos = { "Alimentos", "Textiles", "Electrónicos", "Químicos", "Maquinaria", "Otros" };
 
-            for (int i = 0; i < cantidadAgregar; i++)
+            for (int i = 0; i < cantidad; i++)
             {
                 double peso = rnd.Next(500, 5000);
                 string tipo = tipos[rnd.Next(tipos.Length)];
@@ -463,7 +461,6 @@ namespace GestionContenedores
                 Contenedor cont = new Contenedor(peso, tipo);
                 cont.GenerarID();
 
-                // No se asigna fecha aquí
 
                 if (peso <= 1000)
                 {
@@ -485,8 +482,9 @@ namespace GestionContenedores
                 }
             }
 
-            MessageBox.Show($"{cantidadAgregar} contenedores aleatorios generados.");
+            MessageBox.Show($"{cantidad} contenedores aleatorios generados.");
         }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
