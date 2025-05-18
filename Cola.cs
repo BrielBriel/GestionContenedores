@@ -9,8 +9,8 @@ namespace GestionContenedores
     class Cola
     {
         Object[] Arreglo;
-        int Size;
-        int NE { get;set; }
+        public int Size { get; set; }
+        public int NE { get;set; }
         int Inicio;
         int Final;
 

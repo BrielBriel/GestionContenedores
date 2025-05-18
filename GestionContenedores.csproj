@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Cola.cs" />
     <Compile Include="Contenedor.cs" />
+    <Compile Include="FechaSimulada.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
