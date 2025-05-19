@@ -92,10 +92,7 @@ namespace GestionContenedores
             groupBox2.Width = this.ClientSize.Width - 40;
             groupBox3.Width = this.ClientSize.Width - 40;
 
-            // Reubicar los botones en la parte inferior derecha
-            btnIngresar.Left = this.ClientSize.Width - btnIngresar.Width - 20;
-            btnReport.Left = this.ClientSize.Width - btnReport.Width - 20;
-
+            
             if (resizeTimer != null) resizeTimer.Stop(); // Detener el temporizador si ya está activo
             resizeTimer = new Timer();
             resizeTimer.Interval = 100; // Tiempo de espera para reducir repintados
@@ -696,6 +693,11 @@ namespace GestionContenedores
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }
