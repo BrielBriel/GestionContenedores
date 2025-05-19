@@ -202,6 +202,12 @@ namespace GestionContenedores
                 return;
             }
 
+            if (peso <= 0)
+            {
+                MessageBox.Show("El peso debe ser mayor que cero.");
+                return;
+            }
+
             int capacidadMaxima = 1000;
             int contActuales = ContarContenedoresActuales();
 
@@ -242,6 +248,7 @@ namespace GestionContenedores
             txtTp.Clear();
             txtKg.Clear();
         }
+
 
         private void btnReport_Click(object sender, EventArgs e)
         {
@@ -698,6 +705,11 @@ namespace GestionContenedores
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDias_TextChanged(object sender, EventArgs e)
         {
 
         }
