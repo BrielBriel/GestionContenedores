@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GestionContenedores
 {
@@ -17,6 +18,7 @@ namespace GestionContenedores
         public DateTime DateRegister { get; set; }
         public DateTime FechaSalida { get; set; }
 
+        
         public Contenedor()
         {
             this.IdUnico = "na";
