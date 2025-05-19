@@ -19,18 +19,43 @@ namespace GestionContenedores
         FechaSimulada fechaSimulada;
         List<Contenedor> entregados;
         private const int MAX_CONTENEDORES = 1000;
-
+        private Timer resizeTimer;
 
         public Form1()
         {
             InitializeComponent();
+            typeof(TableLayoutPanel).InvokeMember("DoubleBuffered",
+        System.Reflection.BindingFlags.SetProperty |
+        System.Reflection.BindingFlags.Instance |
+        System.Reflection.BindingFlags.NonPublic,
+        null, tableLayoutPanel1, new object[] { true });
+
             pMenorIgual = new Pila(1000);
             pMayor = new Pila(1000);
             cx = new Cola(1000);
             int[] camionesCarga = new int[] { 100 };
             fechaSimulada = new FechaSimulada();
             entregados = new List<Contenedor>();
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            tableLayoutPanel1.BackColor = Color.Transparent;
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            pictureBox1.SendToBack();
+            tableLayoutPanel1.BringToFront();
+            this.Refresh();
         }
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                e.Graphics.DrawImage(pictureBox1.Image, 0, 0, this.Width, this.Height);
+            }
+            else
+            {
+                base.OnPaintBackground(e);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             lblFechaSimulada.Text = $"Fecha: {fechaSimulada}";
@@ -50,8 +75,11 @@ namespace GestionContenedores
             groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 
+            this.DoubleBuffered = true; // Habilitar el doble buffer para evitar parpadeos
             // Suscribirse al evento Resize para ajuste dinámico
             this.Resize += new EventHandler(Form1_Resize);
+            this.ResizeBegin += new EventHandler(Form1_ResizeBegin);
+            this.ResizeEnd += new EventHandler(Form1_ResizeEnd);
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -67,6 +95,30 @@ namespace GestionContenedores
             // Reubicar los botones en la parte inferior derecha
             btnIngresar.Left = this.ClientSize.Width - btnIngresar.Width - 20;
             btnReport.Left = this.ClientSize.Width - btnReport.Width - 20;
+
+            if (resizeTimer != null) resizeTimer.Stop(); // Detener el temporizador si ya está activo
+            resizeTimer = new Timer();
+            resizeTimer.Interval = 100; // Tiempo de espera para reducir repintados
+            resizeTimer.Tick += (s, args) =>
+            {
+                resizeTimer.Stop(); // Detener el temporizador después de ejecutar el ajuste
+                AjustarTamanos(); // Llamar a la función para ajustar los controles
+            };
+            resizeTimer.Start();
+        }
+        private void AjustarTamanos()
+        {
+            txtReporte.Width = this.ClientSize.Width - 40;
+            txtReporte.Height = this.ClientSize.Height - 150;
+        }
+
+        private void Form1_ResizeBegin(object sender, EventArgs e)
+        {
+            this.SuspendLayout(); // Suspende la actualización del formulario
+        }
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            this.Invalidate(); // Redibuja la imagen con el nuevo tamaño
         }
 
         private int ContarContenedoresActuales()
@@ -639,6 +691,11 @@ namespace GestionContenedores
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

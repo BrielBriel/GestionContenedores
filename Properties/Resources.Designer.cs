@@ -133,6 +133,26 @@ namespace GestionContenedores.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prueba_mejor2 {
+            get {
+                object obj = ResourceManager.GetObject("prueba mejor2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prueba_mejor3 {
+            get {
+                object obj = ResourceManager.GetObject("prueba mejor3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap terminal_contenedores_envio_al_atardecer_puerto_moderno_fondo_comercio_global_631068_938 {
             get {
                 object obj = ResourceManager.GetObject("terminal-contenedores-envio-al-atardecer-puerto-moderno-fondo-comercio-global_631" +
